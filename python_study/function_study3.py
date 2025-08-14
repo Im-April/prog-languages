@@ -18,3 +18,10 @@ def calculate_circle_area(radius):
 print(f'반지름이 5인 원의 넓이 : {calculate_circle_area(5)}')
 
 # 여러 값을 반환하는 함수
+def get_name_and_age() :
+    name = '홍길동'
+    age = 30
+    return name, age # 튜플로 반환
+
+person_name, person_age = get_name_and_age()
+print(f'이름 : {person_name}\n나이 : {person_age}')
