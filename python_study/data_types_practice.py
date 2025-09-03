@@ -100,8 +100,7 @@ multiline = "첫째 줄\n둘째 줄\n셋째 줄"
 lines = multiline.splitlines()
 print(lines)
 
-print()
-print('-----공백 처리-----')
+# 공백처리 
 
 text = "  Hello World  "
 print(text.strip()) # "Hello World" (양쪽 공백 제거)
@@ -111,3 +110,4 @@ print(text.rstrip()) # "  Hello World" (오른쪽 공백 제거)
 # 특정 문자 제거
 text2 = "***Hello***"
 print(text2.strip("*"))     # "Hello"
+
