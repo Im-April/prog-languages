@@ -1,5 +1,5 @@
 # 문자열 (String)
-print('-----str-----\n')
+print('\n-----str-----\n')
 print(type('안녕하세요'))
 print()
 
@@ -41,3 +41,37 @@ print('이름\t나이\t지역')
 print('윤인성\t12\t강서구')
 print('윤아린\t21\t강서구')
 print('구름\t3\t강서구')
+
+print('\n-----문자열 연산자-----\n')
+print('# 문자열 연산자 : +')
+print('안녕'+'하세요')
+first_name = '김'
+last_name = '철수'
+full_name = first_name + last_name
+print(full_name)
+
+print('\n# 문자열 연산자 : *')
+print('안녕하세요'*3)
+star = '*'
+line = star * 10
+print(line)
+laught = '하'
+big_laught = laught * 5
+print(big_laught)
+
+print('\n# 포함 연산자 : in')
+text = '안녕하세요, 파이썬 공부중입니다.'
+print('파이썬' in text) # True
+print('자바' in text) # False
+
+print('\n# 불포함 연산자 : not in')
+forbidden_words = ["욕설", "비방", "광고"]
+user_input = "안녕하세요 반갑습니다"
+
+clean = True
+
+for word in forbidden_words : 
+  if word in user_input :
+    clean = False
+    break
+print(clean)
