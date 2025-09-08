@@ -154,3 +154,8 @@ print(f'가운데 글자 : {message[len(message)//2]}')
 
 print('\n# 문자열 길이 구하기')
 print(len('안녕하세요'))
+
+print('\n# 문자열 연산자의 우선순위')
+print('안녕'+'하세요'*3)
+print(('안녕'+'하세요')*3)
+print('안녕'+('하세요'*3))
