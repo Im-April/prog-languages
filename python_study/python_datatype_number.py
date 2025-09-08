@@ -106,7 +106,7 @@ discount_amount = original_price * discount_rate
 finale_price = original_price - discount_amount
 print(f'원가 : {original_price}원\n할인가 : {finale_price}원')
 
-print('\n-----2. 할인 계산-----')
+print('\n-----2. 시간 계산-----')
 total_seconds = 3665
 hours = total_seconds // 3600
 minutes = (total_seconds % 3600) // 60
