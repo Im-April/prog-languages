@@ -268,3 +268,47 @@ print('\n----천 단위 구분자-----')
 big_num = 1234567
 print('금액: {:,}원'.format(big_num))
 
+print('\n----문자열 양 옆 공백 제거-----')
+input_a = """
+    안녕하세요
+문자열 함수를 알아봅시다.
+"""
+print(input_a)
+print(input_a.strip())
+
+print('\n# 활용 예시')
+
+print('\n----성적표 만들기-----')
+
+name = "홍길동"
+korean = 85
+english = 92
+math = 78
+total = korean + english + math
+average = total / 3
+
+report = """
+=== 성적표 ===
+학생명: {name}
+국어: {korean:3d}점
+영어: {english:3d}점  
+수학: {math:3d}점
+-----------
+총점: {total:3d}점
+평균: {average:5.1f}점
+""".format(name=name, korean=korean, english=english, 
+           math=math, total=total, average=average)
+
+print(report)
+
+print('\n----상품 목록-----')
+products = [
+    ("사과", 2000, 10),
+    ("바나나", 3000, 5), 
+    ("오렌지", 2500, 8)
+]
+
+print("상품명    가격     수량")
+print("-" * 20)
+for name, price, quality in products:
+  print('{:6s} {:,}원 {:2d}개'.format(name, price, quality))
