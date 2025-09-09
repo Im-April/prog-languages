@@ -159,3 +159,35 @@ print('\n# 문자열 연산자의 우선순위')
 print('안녕'+'하세요'*3)
 print(('안녕'+'하세요')*3)
 print('안녕'+('하세요'*3))
+
+print('\n# 문자열의 format()함수')
+
+name = '김철수'
+age = 24
+
+# {} 자리에 순서대로 값 들어감
+message = '안녕하세요, {}님 나이는 {}살이군요.'.format(name, age)
+print(message)
+
+string_a = '{}'.format(10)
+print(string_a)
+print(type(string_a))
+
+format_a = '{}만원'.format(5000)
+format_b = '파이썬 열공하여 첫 연봉 {} 만 원 만들기'.format(5000)
+format_c = '{} {} {}'.format(3000, 4000, 5000)
+format_d = '{} {} {}'.format(1, '문자열', True)
+
+print(format_a)
+print(format_b)
+print(format_c)
+print(format_d)
+
+print('\n-----인덱스 지정-----')
+text = "{0}님은 {1}살이고, {0}님의 취미는 독서입니다.".format("이영희", 30)
+print(text)
+
+print('\n-----키워드 사용-----')
+info = '이름: {name}, 점수: {score}점'.format(name='김철수', score=80)
+print(info)
+
