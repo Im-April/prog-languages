@@ -191,3 +191,80 @@ print('\n-----키워드 사용-----')
 info = '이름: {name}, 점수: {score}점'.format(name='김철수', score=80)
 print(info)
 
+# 정수
+output_a = '{:d}'.format(52)
+
+# 특정 칸에 출력하기
+output_b = '{:5d}'.format(52) # 5칸
+output_c = '{:10d}'.format(52) # 10칸
+
+# 빈칸을 0으로 채우기
+output_d = '{:05d}'.format(52)
+output_e = '{:05d}'.format(-52)
+
+print('# 기본')
+print(output_a)
+print('# 특정 칸에 출력하기')
+print(output_b)
+print(output_c)
+print('# 빈칸을 0으로 채우기')
+print(output_d)
+print(output_e)
+
+output_f = '{:+d}'.format(52) # 양수
+output_g = '{:+d}'.format(-52) # 음수
+output_h = '{: d}'.format(52) # 양수 : 기호 부분 공백
+output_i = '{: d}'.format(-52) # 음수 : 기호 부분 공백
+
+print('# 기호와 함께 출력하기')
+print(output_f)
+print(output_g)
+print(output_h)
+print(output_i)
+
+print('\n# 조합하기')
+a1 = '{:+5d}'.format(52)
+a2 = '{:+5d}'.format(-52)
+print(a1)
+print(a2)
+
+a3 = '{:=+5d}'.format(52)
+a4 = '{:=+5d}'.format(-52)
+print(a3)
+print(a4)
+
+a5 = '{:+05d}'.format(52)
+a6 = '{:+05d}'.format(-52)
+print(a5)
+print(a6)
+
+print('\n# 숫자 포맷팅')
+print('----소수점 자리수-----')
+pi = 3.141592653
+print('원주율: {:.2f}'.format(pi))
+print('원주율: {:.4f}'.format(pi))
+print('{:15.3f}'.format(52.273))
+print('{:15.2f}'.format(52.273))
+print('{:15.1f}'.format(52.273))
+
+print('----자릿수 맞추기-----')
+number = 32
+print('번호: {:03d}'.format(number)) # 3자리, 빈자리는 0으로
+print('번호: {:5d}'.format(number)) # 5자리
+
+exam = 52.273
+print('{:f}'.format(exam))
+print('{:15f}'.format(exam))
+print('{:+15f}'.format(exam))
+print('{:+015f}'.format(exam))
+
+print('\n----의미 없는 소수점 제거하기-----')
+a = 52.0
+b = '{:g}'.format(a)
+print(a)
+print(b)
+
+print('\n----천 단위 구분자-----')
+big_num = 1234567
+print('금액: {:,}원'.format(big_num))
+
