@@ -274,3 +274,26 @@ elif weather == '비':
     print('따듯하게 입으세요')
 else :
   print('따듯하게 입고 조심히 다니세요')
+
+print('\n# False로 변환되는 값')
+if 0:
+  print('0은 True로 변환됩니다.')
+else:
+  print('0은 False로 변환됩니다.') # 0은 False
+print()
+
+if "":
+  print('빈 문자열은 True로 변환됩니다.')
+else:
+  print('빈 문자열은 False로 변환됩니다.') # 빈 문자열은 False
+
+print('\n# pass')
+number = input('정수 입력 : ')
+number = int(number)
+
+if number > 0:
+  # 양수일 때 미구현 상태
+  pass
+else :
+  # 음수일 때 미구현 상태
+  pass
