@@ -11,6 +11,17 @@ print(10 < 100)
 print(10 > 100)
 print(10 <= 100)
 print(10 >= 100)
+
+a = 10
+b = 5
+
+print(a > b)   # True (크다)
+print(a < b)   # False (작다)
+print(a >= b)  # True (크거나 같다)
+print(a <= b)  # False (작거나 같다)
+print(a == b)  # False (같다)
+print(a != b)  # True (같지 않다)
+
 print('가방' == '가방')
 print('가방' != '하마')
 print('가방' <= '하마') # 가나다순으로 앞에 있는 것이 작은 값
@@ -32,6 +43,27 @@ print(True or True) # True
 print(True or False) # True
 print(False or True) # True
 print(False or False) # False
+
+age = 25
+has_liecense = True
+
+if age >= 18 and has_liecense:
+  print('운전할 수 있습니다.')
+else :
+  print('운전할 수 없습니다.')
+
+weather = '비'
+if weather =='비' or weather == '눈':
+  print('우산을 챙기세요')
+else :
+  print('좋은 날씨네요')
+
+is_weekend = False
+
+if not is_weekend:
+  print('평일입니다. 일하러 가야죠!')
+else:
+  print('주말입니다. 쉬세요!')
 
 print('\n# if 조건문')
 print('-----기본 if문-----')
@@ -143,3 +175,102 @@ else :
   grade = 'F'
 
 print(f'학점: {grade}')
+
+print('\n#실용적인 예시들')
+print('-----1. 로그인 시스템-----')
+correct_id = 'admin'
+correct_password = '1234'
+
+user_id = 'admin'
+user_password = '1234'
+
+if user_id == correct_id and user_password == correct_password:
+  print('로그인 성공')
+  print('환영합니다')
+elif user_id == correct_id:
+  print('비밀번호가 틀렸습니다.')
+else :
+  print('존재하지 않는 아이디입니다.')
+
+print('-----2. BMI 계산기-----')
+height = float(input("키(cm): ")) / 100  # m로 변환
+weight = float(input("체중(kg): "))
+
+bmi = weight / (height ** 2)
+
+print(f'BMI: {bmi:.1f}')
+
+if bmi < 18.5:
+  print('저체중 입니다')
+elif bmi < 23:
+  print('정상체중 입니다.')
+elif bmi < 25:
+  print('과체중 입니다.')
+else:
+  print('비만입니다.')
+
+print('-----3. 계산기-----')
+num1 = float(input("첫 번째 숫자: "))
+operator = input("연산자(+, -, *, /): ")
+num2 = float(input("두 번째 숫자: "))
+
+if operator == '+':
+  result = num1 + num2
+elif operator == '-':
+  result = num1 - num2
+elif operator == '*':
+  result  = num1 * num2
+elif operator == '/':
+  if num2 != 0:
+    result = num1 / num2
+  else:
+    print('0으로 나눌 수 없습니다')
+    result = None
+else :
+  print('잘못된 연산자 입니다.')
+  result = None
+
+if result is not None:
+ print(f"결과: {num1} {operator} {num2} = {result}")
+
+ print('-----4. 나이별 영화 관람 등급-----')
+ age = int(input("나이를 입력하세요: "))
+movie_rating = input("영화 등급(전체, 12, 15, 청불): ")
+
+if movie_rating == "전체":
+    print("관람 가능합니다.")
+elif movie_rating == "12":
+    if age >= 12:
+        print("관람 가능합니다.")
+    else:
+        print("12세 이상만 관람 가능합니다.")
+elif movie_rating == "15":
+    if age >= 15:
+        print("관람 가능합니다.")
+    else:
+        print("15세 이상만 관람 가능합니다.")
+elif movie_rating == "청불":
+    if age >= 18:
+        print("관람 가능합니다.")
+    else:
+        print("18세 이상만 관람 가능합니다.")
+else:
+    print("잘못된 등급입니다.")
+
+print('-----5. 중첩 조건문-----')
+weather = input("날씨는? (맑음/비/눈): ")
+temperature = int(input("온도는? "))
+
+if weather == '맑음':
+  if temperature >= 25:
+    print('반팔을 입으세요')
+  elif temperature >= 15:
+    print('길팔을 입으세요')
+  else:
+    print('자켓을 입으세요')
+elif weather == '비':
+  print('우산을 가져가세요')
+  if temperature <= 10:
+    print('따듯하게 입으세요')
+else :
+  print('따듯하게 입고 조심히 다니세요')
